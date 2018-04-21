@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans|Lobster+Two|Montserrat" rel="stylesheet">
+    
+    <!--Map JS-->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+    <script src="locationpicker.jquery.js"></script>
+    
+    <!--CSS-->
+    <title>Suggest a Spot!</title>
+    <style>
+        body{
+            margin: 0px;
+            overflow: hidden;
+        }
+        #bg{
+            position: fixed;
+            top: 0;
+            z-index: -1;
+        }
+        .header{
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #2a2a2a;
+            text-align: right;
+            font-family: 'Bree Serif',serif;
+            line-height: 100px;
+        }
+        .header>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .header>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+        }
+        #n1,#n2,#n3,#n4{
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #pwp{
+            display: block;
+            float: left;
+            width: 400px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: center;
+            padding-right: 40px;
+            color: cadetblue;
+            line-height: 100px;
+            font-size: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            box-shadow: 10px 2px 15px #000000;
+        }
+        #logo{
+            display: block;
+            float: left;
+            width: 200px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: left;
+            padding-top: 10px;
+        }
+        .main{
+            margin-top: 100px;
+            width: 100%;
+        }
+        #title1,#title2{
+            padding-left: 200px;
+            font-size: 80px;
+            font-family: 'Lobster Two', cursive;
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #title1{
+            padding-top: 40px;
+        }
+        #input{
+            padding-left: 400px;
+            padding-top: 20px;  
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #box{
+            width: 400px;
+            height: 35px;
+            border: 2px solid #2a2a2a;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: 'Bree Serif',serif;
+            padding-left: 5px;
+        }
+        #box:focus{
+            outline: none;
+        }
+        #button{
+            width: 80px;
+            height: 35px;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: 'Bree Serif',serif;
+            padding-bottom: 5px;
+            background-color: black;
+            color: white;
+        }
+        #button:hover{
+            border: 2px solid red;
+            color: red;
+        }
+        #button:focus{
+            outline: none;
+        }
+        #title2{
+            padding-top: 150px;
+        }
+        #mapwrap{
+            padding-left: 400px;
+            padding-top: 20px;
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #map{
+            width: 1000px;
+            height: 400px;
+            box-shadow: 6px 6px 10px #2a2a2a;
+        }
+        #lat,#lon,#add{
+            width: 400px;
+            height: 35px;
+            border: 2px solid #2a2a2a;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: 'Bree Serif',serif;
+            padding-left: 5px;
+        }
+        #mapwrap>label{
+            font-family: 'Bree Serif', serif;
+            font-size: 20px;
+        }
+        .footer{
+            overflow: hidden;
+            display: block;
+            float: left;
+            width: 100%;
+            height: 70px;
+            background-color: #2a2a2a;
+            text-align: center;
+            font-family: 'Josefin Sans',sans-serif;
+            line-height: 100px;
+        }
+        .footer>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .footer>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+        }
+        #socialimgs{
+            display: block;
+            float: left;
+            border-right: 2px solid #1a1a1a;
+        }
+        #socialimgs>a{
+            padding-top: 0px;
+            padding-right: 20px;
+        }
+        #copy{
+            line-height: 70px;
+            font-size: 30px;
+            color: #7E7E7E;
+        }
+    </style>
+    <script>
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+    });
+    </script>
+</head>
+<body>
+    <img id="bg" src="bg.jpg">
+    <div class="header">
+        <div id="logo"><a href="HOME.html"><img src="wander.jpg"></a></div>
+        <div id="pwp">Suggest a Spot!</div>
+        <a id='n1' href="HOME.html">Home</a>
+        <a id='n2' href="msmap.html">Map</a>
+        <a id='n3' href="Suggest.html">Suggest a Spot!</a>
+        <a id='n4' href="bayslides.html">Gallery</a>
+    </div>
+    <div class="main">
+        <div id="title1">
+            Enter your favourite spot
+        </div>
+        <div id="input">
+            <input type="text" id="box" placeholder="Type Here">
+            <button id="button">Enter!</button>
+        </div>
+        <div id="title2">
+            Or Pick one Yourself!
+        </div>
+        <div id="mapwrap">
+            <div id="map"></div><br>
+            <label>Latitude:</label><br>
+            <input id="lat" type="text" disabled="disabled"><br>
+            <label>Longitude:</label><br>
+            <input id="lon" type="text" disabled="disabled"><br>
+            <label>Address:</label><br>
+            <input id="add" type="text" disabled="disabled"><br><br>
+            <button id="button">Submit</button><br>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="socialimgs">
+            <a href="http://twitter.com/" target='_blank'><img src='https://abs.twimg.com/icons/apple-touch-icon-192x192.png' alt=xx width=30px height=30px></a>
+            <a href="https://www.instagram.com/" target='_blank'><img src='https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300' alt=xx width=30px height=30px></a>
+            <a href="https://www.facebook.com/" target='_blank'><img src='https://blog.addthiscdn.com/wp-content/uploads/2015/11/logo-facebook.png' alt=xx width=30px height=30px></a>
+            <a href="https://plus.google.com/" target='_blank'><img src='https://9to5google.files.wordpress.com/2016/08/google-plus-logo.png?w=1000' alt=xx width=30px height=30px></a>
+            <a href="https://www.youtube.com/" target='_blank'><img src='https://lh3.googleusercontent.com/4TR7dlSEhUdySTcbWWmSdTqgeoBkMntBcDw1LWqKlI9wSZOk1rqjcgFE6w1hyzFDbQM=w300' alt=xx width=30px height=30px></a>
+        </div>
+        <div id="copy">&copy; Wander Inc., New Zealand</div>
+    </div>
+    <script>
+        setTimeout(bod,750);
+        setTimeout(a,749);
+        function a(){
+            document.getElementById('n4').style.opacity=1;
+            setTimeout(b,750);
+        }
+        function b(){
+            document.getElementById('n3').style.opacity=1;
+            setTimeout(c,750);
+        }
+        function c(){
+            document.getElementById('n2').style.opacity=1;
+            setTimeout(d,750);
+        }
+        function d(){
+            document.getElementById('n1').style.opacity=1;
+        }
+        function bod(){
+            document.getElementById('title1').style.opacity=1;
+            document.getElementById('input').style.opacity=1;
+            setTimeout(bod1,1500);
+        }
+        function bod1(){
+            document.getElementById('title2').style.opacity=1;
+            document.getElementById('mapwrap').style.opacity=1;
+            setTimeout(scrollenable,1000);
+        }
+        function scrollenable(){
+            $('body').css({'overflow':'auto'});
+        }
+        $('#map').locationpicker({
+            inputBinding: {
+                latitudeInput: $('#lat'),
+                longitudeInput: $('#lon'),
+                locationNameInput: $('#add')
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/BHAVANI%20SHANKAR/Desktop/PROJECT/baylw.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="./qulw files/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans|Lobster+Two|Montserrat" rel="stylesheet">
+
+
+
+
+<style>
+.header{
+			z-index: 5;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #2a2a2a;
+            text-align: right;
+            font-family: 'Bree Serif',serif;
+            line-height: 100px;
+        }
+        .header>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .header>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+            text-decoration: none;
+        }
+        #n1,#n2,#n3,#n4{
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #pwp{
+            display: block;
+            float: left;
+            width: 400px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: center;
+            padding-right: 40px;
+            color: cadetblue;
+            line-height: 100px;
+            font-size: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            box-shadow: 10px 2px 15px #000000;
+        }
+        #pwp>a{
+        	text-decoration: none;
+        	color: cadetblue;
+        }
+        #pwp>a:hover{
+        	text-decoration: none;
+        	color: #2a2a2a;
+        }
+        #logo{
+            display: block;
+            float: left;
+            width: 200px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: left;
+            padding-top: 10px;
+        }
+
+.container {
+  position:relative;
+  width: 40%;
+}
+
+.image {
+  display: block;
+  width:100%;
+  height:50vh;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  opacity:0.75;
+  
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  
+}
+
+.text1 {
+    white-space: nowrap; 
+  color: #ffffff;
+  font-size: 28px;
+  position: absolute;
+  overflow: hidden;
+  top:10%;
+  left:10%;
+  font-family: 'Cookie', cursive;
+  transform: translate(-10%, -10%);
+  -ms-transform: translate(-10%, -10%);
+}
+
+.text {
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  
+  position: absolute;
+  
+  width: 100%;
+  text-align:center;
+}
+
+.text2 {
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  padding: 8px 12px;
+  position: relative;
+  top : 1500px;
+  width: 100%;
+  text-align:center;
+}
+
+.st {
+  color: #ffffff;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
+  text-align:center;
+}
+
+.h {  font-family: 'Dancing Script', cursive; }
+
+/*body{color : white; background: linear-gradient(45deg, rgba(243,226,199,1) 8%, rgba(232,171,80,1) 33%, rgba(227,143,18,1) 46%, rgba(208,142,42,1) 67%, rgba(182,141,76,1) 96%);*/
+
+.ct{
+	color:#ffffff;
+	font-family: 'Lobster', cursive;
+	font-size: 100px;
+	
+	} 
+	
+     body {
+		        background-color:#00CCFF;
+				text-align:center;
+				margin:0;
+				
+		 }
+		 
+	 #nav2 {
+		     height: 100px;
+			 width : 1500px;
+			 background-color:#377D7A;
+			 margin-left:auto;
+			 margin-right:auto;
+			 margin-top:auto;
+			 margin-bottom:auto;
+			 opacity : 0.7;
+			 filter : alpha (opacity = 70);
+		 }
+		 #nav2 ul li {
+		   list-style : none;
+		   display: inline;
+		   font-weight: bold;
+		   padding:20px;
+		 }
+		 #nav2 a {
+		 color : white;
+		 text-decoration : none;
+		 }
+		 #nav2 ul li:hover{
+		  background : red;
+		  
+		  transition : all 0.5s;
+		 }
+		 a:visited {
+		    text-decoration: none;
+		    color:white;
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color:white;
+		}
+
+		a:active {
+		    text-decoration: underline;
+		    color:white;
+		}
+		
+		td {
+			text-align:center;
+		}
+		.c7{
+                  width:100%;padding:0;
+			    }
+		 
+			    .footer{
+            overflow: hidden;
+            display: block;
+            float: left;
+            width: 100%;
+            height: 70px;
+            background-color: #2a2a2a;
+            text-align: center;
+            font-family: 'Josefin Sans',sans-serif;
+            line-height: 100px;
+        }
+        .footer>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .footer>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+        }
+        #socialimgs{
+            display: block;
+            float: left;
+            border-right: 2px solid #1a1a1a;
+        }
+        #socialimgs>a{
+            padding-top: 0px;
+            padding-right: 20px;
+        }
+        #copy{
+            line-height: 70px;
+            font-size: 30px;
+            color: #7E7E7E;
+        }
+</style>
+</head>
+<body style="margin:0;padding:0;">
+	<div class="header">
+        <div id="logo"><a href="HOME.html"><img src="wander.jpg"></a></div>
+        <div id="pwp"><a href="javascript:history.back()">Go Back</a></div>
+        <a id='n1' href="HOME.html">Home</a>
+        <a id='n2' href="msmap.html">Map</a>
+        <a id='n3' href="Suggest.html">Suggest a Spot!</a>
+        <a id='n4' href="bayslides.html">Gallery</a>
+    </div>
+    <div style="height: 100px"></div>
+
+<center>
+<div style="background-image:url(qubungy.jpeg);width:100%;height:60vh;background-size:cover;">
+ <div class="text">Bungy Swing & Jump</div>
+</div>	 
+ 
+ 
+                    <h2 class="h" style="text-align:center;font-size:50px">Take a leap of faith with a Queenstown bungy jump, flying fox or bungy swing!</h2>
+					<p class="st" style="text-align:center;font-size:35px">
+       Since then, Queenstown has become home to some of the world's most thrilling swinging and flying adventures.<br>
+	   Zip through the forest at high speed on a flying fox, on the highest flying fox in the Southern Hemisphere, <br>
+	   or try out the world's highest swing hundreds of metres above the valley floor.<br><br><br></p>
+                     <h2 class="h" style="text-align:center;font-size:50px"> Try out the world's highest swing hundreds of metres above the valley floor.</h2>
+                    <p class="st" style="text-align:center;font-size:35px"> 
+					
+					</p><br><br><br>
+ 
+ <div class="container">
+  <img src="qub1.jpg" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">NEVIS BUNGY</p>
+	           <hr>
+				<br>		   
+				If you want to do the highest, here it is - 134 metres<br>
+				(440 feet) above the rugged Nevis River.With 8.5 seconds<br>
+				of falling its a breathtaking ground rush like no other. 		   
+						   
+						   </div>
+  </div>
+</div><br><br>
+
+<div class="container">
+  <img src="qub2.jpg" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">LEDGE BUNGY</p>
+	           <hr>
+				<br>		   
+				Based right in the heart of Queenstown the Ledge Bungy is<br>
+				guaranteed to take your breath away. Its a personal challenge<br>
+				like no other adventure .		   
+						   
+						   
+						   </div>
+  </div>
+</div><br><br>
+<div class="container">
+  <img src="qub5.jpg" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">ZIPTREK ZIPLINE TOURS </p>
+	           <hr>
+				<br>		   
+				Ziptrek Ecotours is NZs #1 original zipline tour <br>
+				and is a spectacular and fun eco-adventure through<br>
+				the forest canopy high above Queenstown, situated <br>
+				on Skyline Gondola hill.  
+						   
+						   </div>
+  </div>
+</div><br><br>
+
+<div class="container">
+  <img src="qub6.jpg" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">SHOTOVER CANYON SWING</p>
+	           <hr>
+				<br>		   
+				This is an intense, undie staining, adrenaline stimulation<br>
+				activity achieved by launching yourself from the world’s <br>
+				highest cliff, 109m over the famous Shotover River.			
+						   
+						   
+						   </div>
+  </div>
+</div>
+<br><br>
+
+
+
+<h1 class="text">Air Adventures</h1>
+<img src="qua.JPG" width="100%" height="100%">
+
+
+
+
+
+ 
+ 
+ 
+        <h2 class="h" style="text-align:center;font-size:50px">
+		Take to the skies above Queenstown and try out skydiving, hang gliding, paragliding <br>
+		or an exhilarating scenic flight over our lakes and mountains.
+		</h2>
+		
+					<br><br><br>
+ 
+ <div class="container">
+ 
+  <img src="qua1.JPG" class="image">
+  
+  
+  
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">PARAGLIDING</p>
+	           <hr>
+				<br>		   
+				Let the SkyTrek courtesy shuttle pick you up from town<br>
+				or your accomodation and drive you to one of our many<br>
+				launch areas ranging from 3800 feet (1143 m) to 5500 <br>
+					feet (1676 m) high.	   
+						   
+						   
+						   </div>
+  </div>
+</div><br><br>
+
+<div class="container">
+  <img src="qua2.JPG" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">HELICOPTER FLIGHTS</p>
+	           <hr>
+				<br>		   
+				The magnificent scenery and views around Queenstown, <br>
+				New Zealand can only truly be experienced from the air <br>
+				via a scenic helicopter flight.
+				<br> 		   
+						   
+						   
+						   </div>
+  </div>
+</div><br><br>
+<div class="container">
+  <img src="qua3.JPG" class="image">
+  
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">PARACHUTING</p>
+	           <hr>
+				<br>		   
+				Queens town is a parachuting paradise. With accessible airplanes, and<br> 
+				suitable parachuting areas Queens is a heaven for parachute <br>
+				enthusiasits.<br>
+				<br>			
+						   
+						   
+						   </div>
+  </div>
+</div><br><br>
+
+<div class="container">
+  <img src="qua4.jpg" class="image">
+  <div class="overlay">
+    <div class="text1"><br><p style="padding:10px">SKY DIVING</p>
+	           <hr>
+				<br>		   
+					These extreme adventures all start in Queenstown, but <br>
+					take you high above the town for the most spectacular <br>
+					views and thrilling experiences.<br>
+						   
+						   </div>
+  </div>
+</div><br><br>
+
+
+</center>
+<div class="footer">
+        <div id="socialimgs">
+            <a href="http://twitter.com/" target='_blank'><img src='https://abs.twimg.com/icons/apple-touch-icon-192x192.png' alt=xx width=30px height=30px></a>
+            <a href="https://www.instagram.com/" target='_blank'><img src='https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300' alt=xx width=30px height=30px></a>
+            <a href="https://www.facebook.com/" target='_blank'><img src='https://blog.addthiscdn.com/wp-content/uploads/2015/11/logo-facebook.png' alt=xx width=30px height=30px></a>
+            <a href="https://plus.google.com/" target='_blank'><img src='https://9to5google.files.wordpress.com/2016/08/google-plus-logo.png?w=1000' alt=xx width=30px height=30px></a>
+            <a href="https://www.youtube.com/" target='_blank'><img src='https://lh3.googleusercontent.com/4TR7dlSEhUdySTcbWWmSdTqgeoBkMntBcDw1LWqKlI9wSZOk1rqjcgFE6w1hyzFDbQM=w300' alt=xx width=30px height=30px></a>
+        </div>
+        <div id="copy">&copy; Wander Inc., New Zealand</div>
+    </div>
+<script type="text/javascript">
+	setTimeout(a,749);
+        function a(){
+            document.getElementById('n4').style.opacity=1;
+            setTimeout(b,750);
+        }
+        function b(){
+            document.getElementById('n3').style.opacity=1;
+            setTimeout(c,750);
+        }
+        function c(){
+            document.getElementById('n2').style.opacity=1;
+            setTimeout(d,750);
+        }
+        function d(){
+            document.getElementById('n1').style.opacity=1;
+        }
+</script>			
+	
+
+</body>
+</html>

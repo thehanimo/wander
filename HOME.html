@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Rozha+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans|Lobster+Two" rel="stylesheet">
+	<style>
+		body{
+			margin : 0px;
+		}
+		#bg{
+            position: fixed;
+            top: 0;
+            z-index: -1;
+        }
+        .header{
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #2a2a2a;
+            text-align: right;
+            font-family: 'Bree Serif',serif;
+            line-height: 100px;
+        }
+        .header>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .header>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+            text-decoration: none;
+        }
+        #n1,#n2,#n3,#n4{
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #pwp{
+            display: block;
+            float: left;
+            width: 400px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: center;
+            padding-right: 40px;
+            color: cadetblue;
+            line-height: 100px;
+            font-size: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            box-shadow: 10px 2px 15px #000000;
+        }
+        #logo{
+            display: block;
+            float: left;
+            width: 200px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: left;
+            padding-top: 10px;
+        }
+         .main{
+            margin-top: 100px;
+            width: 100%;
+        }
+		#a1{
+            height : 100vh;
+			width : 100%;
+			background-image : url(bay1.jpg);
+			background-size : cover;
+			display : table;
+			background-attachment : fixed;
+        }
+    	#a2{
+            height : 100vh;
+	        width : 100%;
+			background-image : url(ms.jpg);
+			background-size : cover;
+            display : table;
+			background-attachment : fixed;
+        }
+
+        #a3 {
+            height : 100vh;
+			width : 100%;
+			background-image : url(wel4.jpg);
+			background-size : cover;
+            display : table;
+			background-attachment : fixed;
+        }
+				
+				#a4 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(auk4.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a5 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(queenstown.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a6 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(cc.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a7 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(mtc.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a8 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(tnp.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a9 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(h.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+				
+				#a10 {
+                  height : 100vh;
+				  width : 100%;
+				  background-image : url(fjg.jpg);
+				  background-size : cover;
+                  display : table;
+				   background-attachment : fixed;
+                }
+
+             
+				
+				
+				.tr1 {
+				       font-size:26px;
+					   font-family: 'Bree Serif',serif;
+					   padding:40px;
+					  
+		               margin:0px;		
+					   color : white;
+
+                    } 	
+
+               .tr {
+                       
+					   
+					   font-size : 48px;
+					   font-family: 'Lobster Two', cursive;
+					   text-align:left;
+					   vertical-align:top;
+					   padding:40px;
+		               margin:0px;		
+					   color : white;
+
+                    } 
+
+            .btn{
+				background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 47%, rgba(49,186,230,1) 50%, rgba(55,188,230,1) 52%, rgba(188,224,238,1) 100%);
+				border-radius: 4px;
+				padding: 20px 48px;
+				color: #FFFFFF;
+				font: 20px 'Neuton', serif;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+				-webkit-transition: box-shadow is ease;
+				transition: box-shadow is ease;
+	
+				}
+	.btn:hover	{
+				box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+				-webkit-transition: box-shadow is ease;
+				transition: box-shadow is ease;
+				}		
+
+	.lm{
+		 text-align:center;
+		}
+			a:visited {
+		    text-decoration: none;
+		    color:white;
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color:white;
+		}
+
+		a:active {
+		    text-decoration: underline;
+		    color:white;
+		}
+		
+		td {
+			text-align:center;
+		}
+		.c7{
+                  width:100%;padding:0;
+			    }
+		.footer{
+            overflow: hidden;
+            display: block;
+            float: left;
+            width: 100%;
+            height: 70px;
+            background-color: #2a2a2a;
+            text-align: center;
+            font-family: 'Josefin Sans',sans-serif;
+            line-height: 100px;
+        }
+        .footer>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .footer>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+        }
+        #socialimgs{
+            display: block;
+            float: left;
+            border-right: 2px solid #1a1a1a;
+        }
+        #socialimgs>a{
+            padding-top: 0px;
+            padding-right: 20px;
+        }
+        #copy{
+            line-height: 70px;
+            font-size: 30px;
+            color: #7E7E7E;
+        }
+	    </style>
+	<head>
+	<body>
+		<div class="header">
+        	<div id="logo"><a href="HOME.html"><img src="wander.jpg"></a></div>
+        	<div id="pwp">Home</div>
+        	<a id='n1' href="HOME.html">Home</a>
+        	<a id='n2' href="msmap.html">Map</a>
+        	<a id='n3' href="Suggest.html">Suggest a Spot!</a>
+        	<a id='n4' href="bayslides.html">Gallery</a>
+    	</div>
+    	<div class=main>
+	    <div id="a1">
+	           
+	            <h1 class="tr"> Bay of Islands </h1>
+				<p class="tr1" > What's in here? Get on or in the water!Try scuba diving. You will be ferried far out into the bay to explore a whole new underwater world.</p> 
+				<div class="lm"><a href="BayofIslands.html" class="btn">Explore Bay of Islands</a></div>
+		  </div>	
+	   </div>
+	   
+	   <div id="a5">
+	   
+	         <h1 class="tr"> Queenstown</h1>
+				<p class="tr1" > Feel inspired by Queenstown’s stunning scenery, huge range of activities and renowned warm welcome.</p> <br><br><br>
+				<div class="lm"><a href="QUEENSTOWN.html" class="btn">Explore Queenstown</a></div>
+	   </div>
+	   
+	   <div id="a3">
+	          <h1 class="tr">Wellington</h1>
+			  <p class="tr1" > Wellington is New Zealand's centre of government and the world's southernmost capital city.</p>   <br><br><br>
+			  <div class="lm"><a href="Wellington.html" class="btn">Explore Wellington</a></div>
+	   </div>
+	   
+	   <div id="a4">
+	           <h1 class="tr">Auckland</h1>
+			   <p class="tr1" >Rated as the third most liveable city in the world, Auckland is a thriving multi-cultural hub of cuisine, music, art and culture.</p>  <br><br><br>
+			   <div class="lm"><a href="Auckland.html" class="btn">Explore Auckland</a></div>
+	   </div>
+	   
+	   <div id="a2">
+	            <h1 class="tr">Milford Sound</h1>
+				<p class="tr1" >Situated on the west coast of the South Island, Milford Sound is a fusion of spectacular natural features with amazing visual cues around every corner.</p>  <br><br><br>
+				<div class="lm"><a href="Milford.html" class="btn">Explore Milford Sound</a></div>
+	   </div>
+	</div>  
+	<div class="footer">
+        <div id="socialimgs">
+            <a href="http://twitter.com/" target='_blank'><img src='https://abs.twimg.com/icons/apple-touch-icon-192x192.png' alt=xx width=30px height=30px></a>
+            <a href="https://www.instagram.com/" target='_blank'><img src='https://lh3.googleusercontent.com/aYbdIM1abwyVSUZLDKoE0CDZGRhlkpsaPOg9tNnBktUQYsXflwknnOn2Ge1Yr7rImGk=w300' alt=xx width=30px height=30px></a>
+            <a href="https://www.facebook.com/" target='_blank'><img src='https://blog.addthiscdn.com/wp-content/uploads/2015/11/logo-facebook.png' alt=xx width=30px height=30px></a>
+            <a href="https://plus.google.com/" target='_blank'><img src='https://9to5google.files.wordpress.com/2016/08/google-plus-logo.png?w=1000' alt=xx width=30px height=30px></a>
+            <a href="https://www.youtube.com/" target='_blank'><img src='https://lh3.googleusercontent.com/4TR7dlSEhUdySTcbWWmSdTqgeoBkMntBcDw1LWqKlI9wSZOk1rqjcgFE6w1hyzFDbQM=w300' alt=xx width=30px height=30px></a>
+        </div>
+        <div id="copy">&copy; Wander Inc., New Zealand</div>
+    </div>
+  	
+	<script>
+        setTimeout(a,749);
+        function a(){
+            document.getElementById('n4').style.opacity=1;
+            setTimeout(b,750);
+        }
+        function b(){
+            document.getElementById('n3').style.opacity=1;
+            setTimeout(c,750);
+        }
+        function c(){
+            document.getElementById('n2').style.opacity=1;
+            setTimeout(d,750);
+        }
+        function d(){
+            document.getElementById('n1').style.opacity=1;
+        }
+    </script>
+	
+	
+	
+	
+	</body>
+</html>

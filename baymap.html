@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Sans|Lobster+Two|Montserrat" rel="stylesheet">
+
+    <style>
+      #map {
+        height: 97vh;
+        width: 100%;
+        z-index: -1;
+       }
+       .header{
+      z-index: 5;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #2a2a2a;
+            text-align: right;
+            font-family: 'Bree Serif',serif;
+            line-height: 100px;
+        }
+        .header>a{
+            text-decoration: none;
+            padding-right: 40px;
+            font-size: 30px;
+            color: white;
+        }
+        .header>a:hover{
+            line-height: 80px;
+            color: cadetblue;
+            font-size: 40px;
+            text-decoration: none;
+        }
+        #n1,#n2,#n3,#n4{
+            opacity: 0;
+            -webkit-transition: opacity 1s ease-in;
+            -moz-transition: opacity 1s ease-in;
+            -o-transition: opacity 1s ease-in;
+            -ms-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+        }
+        #pwp{
+            display: block;
+            float: left;
+            width: 400px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: center;
+            padding-right: 40px;
+            color: cadetblue;
+            line-height: 100px;
+            font-size: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            box-shadow: 10px 2px 15px #000000;
+        }
+        #pwp>a{
+          text-decoration: none;
+          color: cadetblue;
+        }
+        #pwp>a:hover{
+          text-decoration: none;
+          color: #2a2a2a;
+        }
+        #logo{
+            display: block;
+            float: left;
+            width: 200px;
+            height: inherit;
+            background-color: #F6F6F6;
+            text-align: left;
+            padding-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <div id="logo"><a href="HOME.html"><img src="wander.jpg"></a></div>
+        <div id="pwp"><a href="javascript:history.back()">Go Back</a></div>
+        <a id='n1' href="HOME.html">Home</a>
+        <a id='n2' href="msmap.html">Map</a>
+        <a id='n3' href="Suggest.html">Suggest a Spot!</a>
+        <a id='n4' href="bayslides.html">Gallery</a>
+    </div>
+			
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var bay = {lat: -35.1844, lng: 174.1646};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: bay,
+		  gestureHandling: 'none',
+		  zoomControl: false
+        });
+        var marker = new google.maps.Marker({
+          position: bay,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAphMXO_TKRrJ-iOC8IfvnNv-zBHlI7n9A&callback=initMap">
+    </script>
+	
+	 <script>
+	 setTimeout(a,749);
+        function a(){
+            document.getElementById('n4').style.opacity=1;
+            setTimeout(b,750);
+        }
+        function b(){
+            document.getElementById('n3').style.opacity=1;
+            setTimeout(c,750);
+        }
+        function c(){
+            document.getElementById('n2').style.opacity=1;
+            setTimeout(d,750);
+        }
+        function d(){
+            document.getElementById('n1').style.opacity=1;
+        }
+	 </script>
+	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,65 @@
+
+*{	
+		margin: 0;
+		padding: 0;
+
+}
+
+html,body{
+	height:100%;
+	width:100%;
+}
+
+video#bgvid{
+	min-height: 100%;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	background-size:cover;
+	z-index:1;
+	position: fixed;
+	
+	
+}
+
+body{
+	background: center center;	
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.container{
+	width: 600px;
+	margin: 0 auto;
+	text-align:center;
+	z-index:2;
+	position: relative;
+	
+}
+h1{
+	color: #FFFFFF;
+	font: 900 96px 'Mr De Haviland', cursive;
+	text-shadow: 0px 2px 4px rgba(0,0,0,0.6);
+	margin-bottom: 25px;
+	
+}
+.btn{
+	background: linear-gradient(45deg, rgba(245,125,125,65) 0%, rgba(255,69,178,0.65) 51%, rgba(255,13,13,0.65) 100%);
+	border-radius: 4px;
+	padding: 20px 48px;
+	color: #FFFFFF;
+	font: 20px 'Neuton', serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+	-webkit-transition: box-shadow is ease;
+	transition: box-shadow is ease;
+	
+}
+.btn:hover{
+	box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+	-webkit-transition: box-shadow is ease;
+	transition: box-shadow is ease;
+}
